@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-sql
+    implementation 'org.apache.spark:spark-sql_2.11:2.3.1'
+
+    // https://mvnrepository.com/artifact/org.apache.spark/spark-core
+    implementation 'org.apache.spark:spark-core_2.11:2.3.1'
+
+    // https://mvnrepository.com/artifact/org.apache.hadoop/hadoop-hdfs
+    testImplementation 'org.apache.hadoop:hadoop-hdfs:2.9.2'
+
+}
+
+test {
+    useJUnitPlatform()
+}
